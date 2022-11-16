@@ -1,0 +1,438 @@
+body{
+    margin: 0;
+}
+.section-top {
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+
+.section-top::before {
+    content: "";
+    background-color: skyblue;
+    width: 105%;
+    height: 150%;
+    position: absolute;
+    right: -54.5%;
+    top: -47%;
+    -webkit-transform: rotate(-10deg);
+    z-index: 0
+    ;
+}
+header nav .navi-global {
+    display: flex;
+}
+ ul {
+    list-style: none;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+}
+.header .logo img{
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+.header{
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_bar{
+    list-style: none;
+    color: #fff;
+    display: flex;
+    z-index: 100;
+}
+.nav_bar li{
+    padding: 0 30px;
+}
+.love{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+#pinkboard{
+    z-index: 200;
+}
+.love .love_text{
+    font-weight: 600;
+    font-size: 80px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -400px;
+    z-index: 300;
+}
+
+.love .love_text2{
+    top: 40%;
+}
+.example{
+    position: relative;
+    /* height: 1000px; */
+    /* background-color: pink; */
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.example::before{
+    content: "";
+    background-color: #e0ebf5;
+    width: 326px;
+    height: 200%;
+    position: absolute;
+    left: 0%;
+    top: -400px;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+.example h2{
+    position: relative;
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 35px;
+    font-family: "akrobat";
+}
+
+.example h2::before{
+    content: "";
+    position: absolute;
+    left: -56px;
+    top: -39px;
+    background-color: yellow;
+    width: 10px;
+    height: 110px;
+    transform: rotate(15deg);
+}
+.example_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content-area {
+    position: relative;
+}
+
+.list-service {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+
+.list-service li {
+    position: relative;
+    width:300px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 82px;
+}
+
+.list-service li a {
+    color: #111;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+     box-shadow: inset 0 0 10px rgba(83,83,82,.6);
+}
+.list-service li a:before {
+    content: "";
+    background: url('./assets/img/icon-arrow-black.png') no-repeat;
+    width: 32px;
+    height: 11px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 50;
+    left: 32px;
+    bottom: 32px;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    left: initial;
+    right: 32px;
+}
+.list-service .white-box {
+    position: relative;
+    height: 100%;
+    padding-left: 280px;
+    z-index: 50;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(83,83,82,.6);
+}
+.list-service .text-mini {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 38px 0 30px 32px;
+}
+.list-service li.workship .title-service {
+    width: 197px;
+}
+
+.list-service li.workship .title-service img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .list-service .text-detail {
+    width: 240px;
+    font-size: 14px;
+    padding-top: 28px;
+    line-height: 28px;
+} */
+/* .list-service li a:after {
+    content: "";
+    background-color: #fff;
+    width: 556px;
+    height: 150%;
+    z-index: 10;
+    position: absolute;
+    right: -240px;
+    top: -20px;
+    transform: rotate(15deg);
+} */
+.list-service li:nth-child(odd) {
+    margin-top: 50px;
+}
+
+
+/* 业务能力样式 */
+.ability{
+    position: relative;
+    height: 1000px;
+    /* background-color: pink; */
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.ability::before{
+    content: "";
+    background-color: #e0ebf5;
+    width: 326px;
+    height: 200%;
+    position: absolute;
+    left: 10%;
+    top: -400px;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+.ability h2{
+    position: relative;
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 35px;
+    font-family: "akrobat";
+}
+
+.ability h2::before{
+    content: "";
+    position: absolute;
+    left: -56px;
+    top: -39px;
+    background-color: yellow;
+    width: 10px;
+    height: 110px;
+    transform: rotate(-15deg);
+}
+.ability_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ability_text{
+    width: 500px;
+}
+
+
+
+/* 合作伙伴样式 */
+.friend{
+    position: relative;
+    min-height: 600px;
+    /* background-color: pink; */
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.friend::before{
+    content: "";
+    background-color: #e0ebf5;
+    width: 326px;
+    height: 200%;
+    position: absolute;
+    left: 10%;
+    top: -400px;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+.friend h2{
+    position: relative;
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 35px;
+    font-family: "akrobat";
+}
+
+.friend h2::before{
+    content: "";
+    position: absolute;
+    left: -56px;
+    top: -39px;
+    background-color: yellow;
+    width: 10px;
+    height: 110px;
+    transform: rotate(-15deg);
+}
+.friend_inner{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.friend_text{
+    width: 500px;
+}
+.friend .list-logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 680px;
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+}
+.friend .list-logo li {
+    width: 216px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    /* -webkit-box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 3%); */
+    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 3%);
+}
+.friend .list-logo li img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 底部样式 */
+footer .top_area{
+    width: 100%;
+    height: 200px;
+    background: url('./assets/img/index/foot.jpg') no-repeat;
+    background-size: cover;
+}
+footer .bottom_area {
+    background-color: skyblue;
+    padding: 68px 0 53px 0;
+}
+footer .footer_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navi-box{
+    display: flex;
+}
+.navi-name{
+    position: relative;
+    width: 220px;
+    margin-right: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "akrobat";
+    letter-spacing: 1.75px; 
+}
+
+.navi-name::before {
+    content: "";
+    border-top: 1px solid #fff;
+    width: 120px;
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+}
+
+.navi-box .list-navi_global {
+    display: flex;
+}
+
+.navi-box .list-navi_global a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    font-family: "akrobat";
+    letter-spacing: 1.62px;
+    text-decoration: none;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.navi-box .list-navi_global a:before {
+    content: "|";
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* -webkit-transform: translateY(-50%); */
+    transform: translateY(-50%);
+}
+
+footer .number{
+    color: #fff;
+    text-align: center;
+}
+
+/* .list-service  li .card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color:transparent;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(83 83 83);
+} */
+
+.card2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all 0.2s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.list-service li .card2:before {
+    content: "";
+    background: url('./assets/img/index/img-service_workship.png') no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 100%;
+    width: 300px;
+    height: 70%;
+    box-shadow: inset 0 0 10px rgba(83,83,82,.6);
+    /* box: shadow bottom 0; */
+} 
+.example_text{
+    position: absolute;
+    top: 70%;
+    left: 30px;
+    width: 240px;
+}
+
+.example_intro{
+    width: 500px;
+}
