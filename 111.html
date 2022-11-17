@@ -1,160 +1,160 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.font.im/css?family=Dancing+Script" rel="stylesheet">
-    <link href="https://fonts.font.im/css?family=Permanent+Marker" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'icomoon';
-            src: url('fonts/icomoon.eot?wr5es');
-            src: url('fonts/icomoon.eot?wr5es#iefix') format('embedded-opentype'),
-                url('fonts/icomoon.ttf?wr5es') format('truetype'),
-                url('fonts/icomoon.woff?wr5es') format('woff'),
-                url('fonts/icomoon.svg?wr5es#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
-            font-display: block;
-        }
-
-        * {
-            font-family: 'icomoon';
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-         
-          
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: linear-gradient(120deg,rgb(255, 196, 0) 40%,rgb(31, 223, 175),rgb(0, 195, 255),rgb(183, 0, 255) 60%);
-        }
-
-        .card {
-            position: relative;
-            width: 250px;
-            height: 300px;
-            transform-style: preserve-3d;
-            cursor: pointer;
-
-        }
-        .card2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            border-radius: 15px;
-            transition: all 0.2s;
-            transform-style: preserve-3d;
-            box-shadow: inset 0 0 30px rgb(83, 83, 82);
-        }
-
-        .card2 img {
-            position: absolute;
-            top: 30px;
-            left: 75px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            transform: translateZ(50px);
-            box-shadow: 0 0 10px rgb(83, 83, 83);
-        }
-        .card2 h2 {
-            font-family: 'Permanent Marker', cursive;
-            position: absolute;
-            top: 150px;
-            width: 100%;
-            height: 28px;
-            font-size: 25px;
-            line-height: 28px; 
-            text-align: center;
-            text-shadow: 0 0 5px rgb(177, 174, 174);
-            color: rgb(33, 34, 34);
-            transform: translateZ(50px);
-        }     
-        .txt{
-            font-family: 'Permanent Marker', cursive;
-            position: absolute;
-              top: 180px;
-              width: 100%;
-              line-height: 30px;
-              font-size: 16px;
-              text-align: center;            
-              text-shadow: 0 0 10px rgb(185, 187, 186);
-              transform: translateZ(50px);
-        }
-        .font{
-          position: absolute;
-          top: 215px;
-          left: 50%;
-          width: 80%;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          transform: translateZ(50px) translateX(-50%);
-        }
-        .font span{
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 30px;
-            color: white;
-            border-radius: 50%;
-            background-color: rgb(61, 60, 60);
-         /*    border: 1px solid rgb(173, 172, 172) ; */
-            box-shadow: inset 0 0 8px white,
-            inset 0 0 8px white,
-            inset 0 0 8px white,
-            0 0 8px black;        
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-    <div class="card">
-        <div class="card2">
-            <img src="img/haha.gif" alt="haha">
-            <h2>北极光之夜</h2>
-            <p class="txt">The aurora borealis.</p>
-            <div class="font">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-                </div>
-        </div>
-    </div>
-
-    <script>
-
-        var card = document.querySelector('.card');
-        var card2 = document.querySelector('.card2');
-        card.addEventListener('mousemove', function (e) {
-            let x = e.clientX - card.offsetLeft;
-            let left = card.offsetWidth / 2;
-            let rotateY = -(left - x) / 8;
-            let y = e.clientY - card.offsetTop;
-            let top = card.offsetHeight / 2;
-            let rotateX = (top - y) / 8;
-            card2.style.cssText = `
-               transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
-        })
-        card.addEventListener('mouseout', function (e) {
-            card2.style.cssText = `
-               transform: rotateY(0deg) rotateX(0deg); `
-        })
-    </script>
+  
 </body>
+<script>
+textStage = new createjs.Stage("text");
 
+stage = new createjs.Stage("stage");
+
+text = new createjs.Text("t", "80px 'Source Sans Pro'", "#eee");
+
+circle = new createjs.Shape();
+
+ // c-元素点对象，dir-方向，in:向字聚集，out：打散
+
+ // movement-jiggle：快速抖动，float：缓慢移动
+
+ function tweenCircle(c, dir) {
+
+if(c.tween) c.tween.kill();
+
+if(dir == 'in') {
+
+//向字聚集
+
+    c.tween = TweenLite.to(c, 0.4, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
+
+    c.movement = 'jiggle';
+
+    tweenCircle(c);
+
+    }});
+
+} else if(dir == 'out') {
+
+//打散
+
+    c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
+
+    c.movement = 'float';
+
+    tweenCircle(c);
+
+    }});
+
+} else {
+
+    if(c.movement == 'float') {
+
+    //打散状态下的缓慢移动
+
+    c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100+Math.random()*200, y: c.y + -100+Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+
+        onComplete: function() {
+
+        tweenCircle(c);
+
+        }});
+
+    } else {
+
+    //聚集状态下的快速抖动
+
+    c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*3, y: c.originY + Math.random()*3, ease:Quad.easeInOut,
+
+        onComplete: function() {
+
+        tweenCircle(c);
+
+        }});
+
+    }
+
+}
+
+}
+
+
+ //text配置后，画到canvas
+
+ textStage.addChild(text);
+
+ textStage.update();
+
+ //获取[文字Canvas]像素列表
+
+ var ctx = document.getElementById('text').getContext('2d');
+
+ var pix = ctx.getImageData(0,0,600,200).data;
+
+ //获取的像素是RGBA4个表示一个像素点
+
+ textPixels = [];
+
+ for (var i = pix.length; i >= 0; i -= 4) {
+
+     if (pix[i] != 0) {
+
+     var x = (i / 4) % 600; // x轴位置，%600(行宽)：用于计算多行
+
+     var y = Math.floor(Math.floor(i/600)/4); // Y轴位置
+
+     //下面的代码，各像素圆点之间的距离为8
+
+     if((x && x%8 == 0) && (y && y%8 == 0)) textPixels.push({x: x, y: y});
+
+     }
+
+ }
+
+ for(var i= 0, l=textPixels.length; i<l; i++) {
+
+circles[i].originX = offsetX + textPixels[i].x;
+
+circles[i].originY = offsetY + textPixels[i].y;
+
+tweenCircle(circles[i], 'in');
+
+}
+
+textFormed = true; // 是否已形成文字Flg
+
+//处理多余像素圆点，但是如果文字需要的像素圆点过多，会如何只有一半文字了吧。。。
+
+if(textPixels.length < circles.length) {
+
+for(var j = textPixels.length; j<circles.length; j++) {
+
+circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 0.1});
+
+}
+
+}
+
+
+for(var i= 0, l=textPixels.length; i<l; i++) {
+
+tweenCircle(circles[i], 'out');
+
+}
+
+if(textPixels.length < circles.length) {
+
+for(var j = textPixels.length; j<circles.length; j++) {
+
+circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 1});
+
+}
+
+}
+
+</script>
 </html>
