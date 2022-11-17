@@ -72,6 +72,27 @@
               </a>
             </div>
           </li>
+          <li class="workship">
+            <div class="card2">
+              <a href="/service/workship">
+                <p class="example_text">这是一个线下活动h5小程序，为客户提供扫码签到、品酒小游戏等功能</p>
+              </a>
+            </div>
+          </li>
+          <li class="workship">
+            <div class="card2">
+              <a href="/service/workship">
+                <p class="example_text">这是一个线下活动h5小程序，为客户提供扫码签到、品酒小游戏等功能</p>
+              </a>
+            </div>
+          </li>
+           <li class="workship">
+            <div class="card2">
+              <a href="/service/workship">
+                <p class="example_text">这是一个线下活动h5小程序，为客户提供扫码签到、品酒小游戏等功能</p>
+              </a>
+            </div>
+          </li>
         </ul>
         <div class="btn-black btn-more">
           <a href="/service">
@@ -160,50 +181,54 @@
 <script type="text/javascript">
 
 
-  document.querySelectorAll('.workship').forEach(item1 => {
-    // console.log(item1);
 
-    
-    document.querySelectorAll('.card2').forEach(item2 => {
-      console.log(item1)
-      console.log(item2)
-      item1.addEventListener('mousemove', function (e) {
+// 多个立体盒子
+var card = document.querySelector('.workship');
+  document.querySelectorAll('.workship').forEach((item1,index) => {
+      item1.addEventListener('mousemove',function(e){
         let x = e.clientX - card.offsetLeft;
         let left = card.offsetWidth / 2;
         let rotateY = -(left - x) / 5;
         let y = e.clientY - card.offsetTop;
         let top = card.offsetHeight / 2;
         let rotateX = (top - y) / 5;
-        item2.style.cssText = `
-               transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
-      })
-      item1.addEventListener('mouseout', function (e) {
-        item2.style.cssText = `
-               transform: rotateY(0deg) rotateX(0deg); `
+        var card2 = document.querySelectorAll('.card2')[index]
+        console.log(card2);
+        card2.style.cssText = `transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
       })
 
-    })
+      item1.addEventListener('mouseout', function (e) {
+        let x = e.clientX - card.offsetLeft;
+        let left = card.offsetWidth / 2;
+        let rotateY = -(left - x) / 5;
+        let y = e.clientY - card.offsetTop;
+        let rotateX = (top - y) / 5;
+        var card2 = document.querySelectorAll('.card2')[index]
+        card2.style.cssText = `transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
+      })
+
   })
+
 
 
 
   // 立体盒子
-  var card = document.querySelector('.workship');
-  var card2 = document.querySelector('.card2');
-  card.addEventListener('mousemove', function (e) {
-    let x = e.clientX - card.offsetLeft;
-    let left = card.offsetWidth / 2;
-    let rotateY = -(left - x) / 5;
-    let y = e.clientY - card.offsetTop;
-    let top = card.offsetHeight / 2;
-    let rotateX = (top - y) / 5;
-    card2.style.cssText = `
-               transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
-  })
-  card.addEventListener('mouseout', function (e) {
-    card2.style.cssText = `
-               transform: rotateY(0deg) rotateX(0deg); `
-  })
+  // var card = document.querySelector('.workship');
+  // var card2 = document.querySelector('.card2');
+  // card.addEventListener('mousemove', function (e) {
+  //   let x = e.clientX - card.offsetLeft;
+  //   let left = card.offsetWidth / 2;
+  //   let rotateY = -(left - x) / 5;
+  //   let y = e.clientY - card.offsetTop;
+  //   let top = card.offsetHeight / 2;
+  //   let rotateX = (top - y) / 5;
+  //   card2.style.cssText = `
+  //              transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg); `
+  // })
+  // card.addEventListener('mouseout', function (e) {
+  //   card2.style.cssText = `
+  //              transform: rotateY(0deg) rotateX(0deg); `
+  // })
 
 
 

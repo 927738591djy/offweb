@@ -17,8 +17,7 @@ body{
     right: -54.5%;
     top: -47%;
     -webkit-transform: rotate(-10deg);
-    z-index: 0
-    ;
+    z-index: 0;
 }
 header nav .navi-global {
     display: flex;
@@ -200,7 +199,7 @@ ul{
     top: -20px;
     transform: rotate(15deg);
 } */
-.list-service li:nth-child(odd) {
+.list-service li:nth-child(even) {
     margin-top: 50px;
 }
 
