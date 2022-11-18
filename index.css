@@ -48,6 +48,7 @@ header nav .navi-global {
 .header .logo{
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 .header .logo img{
     width: 50px;
@@ -55,9 +56,13 @@ header nav .navi-global {
     margin-right: 30px;
 }
 .header{
-    padding-top:80px;
-    padding: 80px 200px 60px 200px;
-    /* margin: 0 50px; */
+    z-index: 800;
+    position: fixed;
+    padding: 20px 0;
+    /* padding-top:80px; */
+    /* padding: 80px 200px 60px 200px; */
+    /* margin-bottom: 60px; */
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -72,12 +77,20 @@ header nav .navi-global {
     padding: 0 30px;
 }
 
+.nav_bar li a{  
+    text-decoration: none;
+    font-family: "akrobat";
+    color: #000;
+    font-size: 14px;
+}
+
 .img-area{
     position: absolute;
     left: 50%;
     margin-left: -500px;
     width: 1500px;
     display: flex;
+    top: 100px;
 }
 
 .img-area .part.part01 {
