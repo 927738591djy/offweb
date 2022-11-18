@@ -16,7 +16,7 @@ body{
     position: absolute;
     right: -54.5%;
     top: -47%;
-    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
     z-index: 5;
 }
 
@@ -27,7 +27,6 @@ body{
     background-color: #f6de79;
     width: 1px;
     height: 300%;
-    -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
     position: absolute;
     right: 10px;
@@ -78,17 +77,7 @@ header nav .navi-global {
     left: 50%;
     margin-left: -500px;
     width: 1500px;
-    /* height: 384px; */
     display: flex;
-    /* justify-content: space-evenly; */
-    /* position: relative;
-    width: 1000px;
-    height: 384px; */
-    /* top: 50%;
-    left: 39%; */
-    /* transform: translate(-50%, -50%); */
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .img-area .part.part01 {
@@ -110,9 +99,6 @@ header nav .navi-global {
     margin-right: 50px;
     width: 165px;
     height: 400px;
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* width: 300px; */
     z-index: 5;
 }
 .img-area .part img {
@@ -159,7 +145,6 @@ header nav .navi-global {
     margin-left: 6px;
 }
 
-
 .love{
     justify-content: center;
     display: flex;
@@ -184,8 +169,6 @@ header nav .navi-global {
 }
 .example{
     position: relative;
-    /* height: 1000px; */
-    /* background-color: pink; */
     overflow: hidden;
     margin-bottom: 120px;
 }
@@ -279,7 +262,6 @@ ul{
     padding-left: 280px;
     z-index: 50;
     overflow: hidden;
-    /* box-shadow: inset 0 0 10px rgba(83,83,82,.6); */
 }
 .list-service .text-mini {
     font-size: 12px;
@@ -322,7 +304,7 @@ ul{
 /* 业务能力样式 */
 .ability{
     position: relative;
-    height: 1000px;
+    height: 800px;
     /* background-color: pink; */
     overflow: hidden;
     margin-bottom: 120px;
@@ -338,6 +320,18 @@ ul{
     transform: rotate(15deg);
     z-index: -1;
 }
+
+.ability::after{
+    content: "";
+   background: url('./assets/img/index/img-about.jpg');
+    height: 75%;
+    width: 1300px;
+    position: absolute;
+    left: 15%;
+    top: 0px;
+    margin: 100px 0;
+    z-index: -2;
+}
 .ability h2{
     position: relative;
     font-size: 60px;
@@ -349,7 +343,7 @@ ul{
 .ability h2::before{
     content: "";
     position: absolute;
-    left: -56px;
+    left: -45px;
     top: -39px;
     background-color: yellow;
     width: 10px;
@@ -364,6 +358,204 @@ ul{
     width: 500px;
 }
 
+.list_abillity{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list_abillity li{
+    position: relative;
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+    box-shadow: 16px 16px 40px 0px rgb(0 0 0 / 12%);
+}
+
+.list_abillity .recruit::before {
+    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
+    background-size: 100%;
+    transition: all 0.6s;
+}
+
+.list_abillity li:hover::before{
+    transform: translateX(10px);
+}
+
+.list_abillity li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 100%;
+    width: 360px;
+    height: 100%;
+}
+
+.list_abillity li a:before {
+    content: "";
+    background: url('./assets/img/icon-arrow-black.png') no-repeat;
+    width: 32px;
+    height: 11px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 800;
+    left: 32px;
+    bottom: 32px;
+    transition: all 0.6s;
+}
+
+.list_abillity li a:hover::before{
+    transform: translateX(10px);
+}
+
+
+.list_abillity li .white-box {
+    position: relative;
+    height: 100%;
+    padding-left: 32px;
+    z-index: 50;
+}
+
+.list_abillity li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #111;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.list_abillity li .text-mini {
+    font-size: 13px;
+    margin-bottom: 32px;
+    padding-top: 48px;
+    font-weight: bold;
+}
+
+.list_abillity li .title-about {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "akrobat";
+    letter-spacing: 4px;
+}
+
+.list_abillity li::after {
+    content: "";
+    background-color: #fff;
+    width: 235px;
+    height: 130%;
+    z-index: 10;
+    position: absolute;
+    left: -30px;
+    top: -37px;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.list_abillity li.company::before {
+    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
+    background-size: 100%;
+    transition: all 0.6s;
+}
+
+.list_abillity li.office::before {
+    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
+    background-size: 100%;
+     transition: all 0.6s;
+}
+.about_big_font{
+    /* margin: 30px 0; */
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left:-35px;
+    font-weight: 600;
+}
+
+
+
+/* 关于我们样式 */
+.about{
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    padding: 40px 20px;
+}
+.about_inner::before {
+    content: "";
+    background-color: #fff;
+    width: 326px;
+    height: 200%;
+    transform: rotate(15deg);
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    margin-left: -168px;
+
+}
+.about_inner{
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    height: 800px;
+    position: relative;
+    margin-bottom: 103px;
+    text-align: center;
+    justify-content: space-between;
+}
+.about_inner img{
+    width: 50%;
+}
+
+.about_text{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    z-index: 500;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.about_p{
+    width: 300px;
+}
+.about_h2{
+    position: relative;
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 35px;
+    font-family: "akrobat";
+}
+.about h2::before{
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: -25px;
+    background-color: yellow;
+    width: 10px;
+    height: 110px;
+    transform: rotate(15deg);
+}
+
+.about_text a{
+    margin-top: 100px;
+    position: relative;
+    display: block;
+    width: 330px;
+    background-color: #111;
+    color: #fff;
+    font-family: "akrobat";
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 3.5px;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
+    overflow: hidden;
+    transition: color 0.2s ease-out;
+}
 
 
 /* 合作伙伴样式 */
@@ -436,7 +628,6 @@ ul{
     height: 100%;
 }
 
-
 /* 底部样式 */
 footer .top_area{
     width: 100%;
@@ -499,7 +690,6 @@ footer .footer_inner{
     position: absolute;
     right: 0;
     top: 50%;
-    /* -webkit-transform: translateY(-50%); */
     transform: translateY(-50%);
 }
 
@@ -508,15 +698,9 @@ footer .number{
     text-align: center;
 }
 
-/* .list-service  li .card{
-    position: relative;
-    width: 250px;
-    height: 300px;
-    background-color:transparent;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgb(83 83 83);
-} */
+
+
+
 
 .card2{
     position: absolute;
@@ -532,7 +716,7 @@ footer .number{
 
 .list-service li .card2:before {
     content: "";
-    background: url('./assets/img/index/img-service_workship.png') no-repeat;
+    background: url('./assets/img/index/taptap.png') no-repeat;
     position: absolute;
     left: 0;
     top: 0;
@@ -559,22 +743,3 @@ footer .number{
     margin-bottom: 100px;
 }
 
-/* 关于我们样式 */
-.about::before{
-    content: "";
-    background-color: #f4f4f4;
-    width: 326px;
-    height: 200%;
-    position: absolute;
-    left: 15%;
-    top: -400px;
-    transform: rotate(15deg);
-    z-index: -1;
-}
-.about_big_font{
-    /* margin: 30px 0; */
-    font-size: 20px;
-    margin-top: 50px;
-    margin-left:-35px;
-    font-weight: 600;
-}
