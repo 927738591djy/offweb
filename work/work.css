@@ -14,7 +14,7 @@ header .section-inner {
 header .header-area {
     display: flex;
     justify-content: space-between;
-    padding-top: 80px;
+    padding:20px 0;
     transition: padding-top 0.5s linear;
 }
 
@@ -32,6 +32,7 @@ header .header-area .logo-main a {
 
 header nav .navi-global {
     display: flex;
+    justify-content: center;
 }
 
 header nav .navi-global li {
@@ -433,6 +434,7 @@ footer .footer_inner {
 
 .navi-box {
     display: flex;
+    justify-content: center;
 }
 
 .navi-name {
