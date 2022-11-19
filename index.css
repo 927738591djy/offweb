@@ -1,6 +1,7 @@
-body{
+body {
     margin: 0;
 }
+
 .section-top {
     position: relative;
     height: 100vh;
@@ -12,12 +13,13 @@ body{
     content: "";
     background-color: #000;
     width: 105%;
-    height: 150%;
+    height: 200%;
     position: absolute;
     right: -54.5%;
     top: -47%;
-    transform: rotate(-15deg);
     z-index: 5;
+    animation: see 1s forwards;
+    /* transform: rotate(-15deg); */
 }
 
 
@@ -38,93 +40,108 @@ body{
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s;
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s, -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s;
 }
+
 header nav .navi-global {
     display: flex;
 }
- ul {
+
+ul {
     list-style: none;
 }
 
-.header .logo{
+.header .logo {
     display: flex;
     align-items: center;
     margin-left: 50px;
 }
-.header .logo img{
+
+.header .logo img {
     width: 50px;
     height: 50px;
     margin-right: 30px;
 }
-.header{
+
+.header {
     z-index: 800;
     position: fixed;
     padding: 20px 0;
-    /* padding-top:80px; */
-    /* padding: 80px 200px 60px 200px; */
-    /* margin-bottom: 60px; */
     width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.nav_bar{
+
+.nav_bar {
     list-style: none;
     color: #fff;
     display: flex;
     z-index: 100;
 }
-.nav_bar li{
+
+.nav_bar li {
     padding: 0 30px;
 }
 
-.nav_bar li a{  
+.nav_bar li a {
     text-decoration: none;
     font-family: "akrobat";
     color: #000;
     font-size: 14px;
 }
 
-.img-area{
+.img-area {
     position: absolute;
     left: 50%;
     margin-left: -500px;
     width: 1500px;
     display: flex;
     top: 100px;
+    /* opacity: 0; */
+
 }
 
 .img-area .part.part01 {
-    transition-delay: 1.5s;
+    opacity: 0;
+    animation: appear 1s 1s forwards;
 }
+
 .img-area .part.part02 {
-    transition-delay: 1.6s;
+    opacity: 0;
+    /* transition-delay: 1.6s; */
+    animation: appear 1s 1.2s forwards;
 }
+
 .img-area .part.part03 {
-    transition-delay: 1.7s;
+    opacity: 0;
+    /* transition-delay: 1.7s; */
+    animation: appear 1s 1.3s forwards;
 }
 
 .img-area .part.part04 {
-    transition-delay: 1.8s;
-    
+    opacity: 0;
+    /* transition-delay: 1.8s; */
+    animation: appear 1s 1.4s forwards;
+
 }
 
-.part{
+.part {
     margin-right: 50px;
     width: 165px;
     height: 400px;
     z-index: 5;
 }
+
 .img-area .part img {
     width: 100%;
     height: 100%;
 }
 
-.top_detail{
+.top_detail {
     display: flex;
     width: 400px;
 }
 
-.top_text_area{
+.top_text_area {
     background-color: #fff;
     z-index: 4;
     display: flex;
@@ -134,40 +151,46 @@ header nav .navi-global {
     margin-left: -500px;
     padding: 40px 30px;
 }
-.top_intro{
- margin-right: 20px;
- font-weight: 700;
- font-size: 20px;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
+
+.top_intro {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.top_detail::before{
+
+.top_detail::before {
     content: '';
     background-color: #000;
     width: 15px;
     height: 100%;
     transform: rotate(18deg);
     z-index: -1;
-    margin-right:40px ;
+    margin-right: 40px;
 }
-.dingzhihua{
+
+.dingzhihua {
     margin-left: 10px;
 }
-.zhuangye{
+
+.zhuangye {
     margin-left: 6px;
 }
 
-.love{
+.love {
     justify-content: center;
     display: flex;
     text-align: center;
     margin-top: 100px;
 }
-#pinkboard{
+
+#pinkboard {
     z-index: 200;
 }
-.love .love_text{
+
+.love .love_text {
     font-weight: 600;
     font-size: 80px;
     position: absolute;
@@ -177,15 +200,17 @@ header nav .navi-global {
     z-index: 300;
 }
 
-.love .love_text2{
+.love .love_text2 {
     top: 40%;
 }
-.example{
+
+.example {
     position: relative;
     overflow: hidden;
     margin-bottom: 120px;
 }
-.example::before{
+
+/* .example::before {
     content: "";
     background-color: #f4f4f4;
     width: 326px;
@@ -195,8 +220,13 @@ header nav .navi-global {
     top: -400px;
     transform: rotate(15deg);
     z-index: -1;
+} */
+
+.example_fangkuai{
+    left: 0px;
 }
-.example h2{
+
+.example h2 {
     position: relative;
     font-size: 60px;
     letter-spacing: 8px;
@@ -204,7 +234,7 @@ header nav .navi-global {
     font-family: "akrobat";
 }
 
-.example h2::before{
+.example h2::before {
     content: "";
     position: absolute;
     left: -56px;
@@ -214,7 +244,8 @@ header nav .navi-global {
     height: 110px;
     transform: rotate(15deg);
 }
-.example_inner{
+
+.example_inner {
     width: 1200px;
     margin: 0 auto;
 }
@@ -229,13 +260,14 @@ header nav .navi-global {
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
 .list-service li {
     position: relative;
-    width:560px;
+    width: 560px;
     height: 350px;
     overflow: hidden;
     margin-bottom: 82px;
@@ -250,6 +282,7 @@ ul{
     height: 100%;
     overflow: hidden;
 }
+
 .list-service li a:before {
     content: "";
     background: url('./assets/img/icon-arrow-black.png') no-repeat;
@@ -264,7 +297,8 @@ ul{
     right: 32px;
     transition: all 0.6s;
 }
-.list-service li a:hover::before{
+
+.list-service li a:hover::before {
     transform: translateX(10px);
 }
 
@@ -276,11 +310,13 @@ ul{
     z-index: 50;
     overflow: hidden;
 }
+
 .list-service .text-mini {
     font-size: 12px;
     font-weight: bold;
     padding: 38px 0 30px 32px;
 }
+
 .list-service li.workship .title-service {
     width: 197px;
 }
@@ -298,6 +334,7 @@ ul{
     line-height: 28px;
     z-index: 100;
 }
+
 .list-service li a:after {
     content: "";
     background-color: #fff;
@@ -309,20 +346,22 @@ ul{
     top: -20px;
     transform: rotate(15deg);
 }
+
 .list-service li:nth-child(even) {
     margin-top: -250px;
 }
 
 
 /* 业务能力样式 */
-.ability{
+.ability {
     position: relative;
     height: 800px;
     /* background-color: pink; */
     overflow: hidden;
     margin-bottom: 120px;
 }
-.ability::before{
+
+/* .ability::before {
     content: "";
     background-color: #f4f4f4;
     width: 326px;
@@ -330,13 +369,26 @@ ul{
     position: absolute;
     left: 10%;
     top: -400px;
-    transform: rotate(15deg);
+    z-index: -1;
+} */
+
+.fangkuai {
+    background-color: #f4f4f4;
+    width: 326px;
+    height: 200%;
+    position: absolute;
+    top: -400px;
+    transform: rotate(10deg);
     z-index: -1;
 }
 
-.ability::after{
+.ability_fangkuai {
+    left: 100px;
+}
+
+.ability::after {
     content: "";
-   background: url('./assets/img/index/img-about.jpg');
+    background: url('./assets/img/index/img-about.jpg');
     height: 75%;
     width: 1300px;
     position: absolute;
@@ -345,7 +397,8 @@ ul{
     margin: 100px 0;
     z-index: -2;
 }
-.ability h2{
+
+.ability h2 {
     position: relative;
     font-size: 60px;
     letter-spacing: 8px;
@@ -353,7 +406,7 @@ ul{
     font-family: "akrobat";
 }
 
-.ability h2::before{
+.ability h2::before {
     content: "";
     position: absolute;
     left: -45px;
@@ -363,21 +416,23 @@ ul{
     height: 110px;
     transform: rotate(-15deg);
 }
-.ability_inner{
+
+.ability_inner {
     width: 1200px;
     margin: 0 auto;
 }
-.ability_text{
+
+.ability_text {
     width: 500px;
 }
 
-.list_abillity{
+.list_abillity {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.list_abillity li{
+.list_abillity li {
     position: relative;
     width: 360px;
     height: 240px;
@@ -391,7 +446,7 @@ ul{
     transition: all 0.6s;
 }
 
-.list_abillity li:hover::before{
+.list_abillity li:hover::before {
     transform: translateX(10px);
 }
 
@@ -418,7 +473,7 @@ ul{
     transition: all 0.6s;
 }
 
-.list_abillity li a:hover::before{
+.list_abillity li a:hover::before {
     transform: translateX(10px);
 }
 
@@ -476,25 +531,27 @@ ul{
 .list_abillity li.office::before {
     background: url('./assets/img/index/1img-service_workship.png') no-repeat;
     background-size: 100%;
-     transition: all 0.6s;
+    transition: all 0.6s;
 }
-.about_big_font{
+
+.about_big_font {
     /* margin: 30px 0; */
     font-size: 20px;
     margin-top: 50px;
-    margin-left:-35px;
+    margin-left: -35px;
     font-weight: 600;
 }
 
 
 
 /* 关于我们样式 */
-.about{
+.about {
     position: relative;
     padding: 100px 0;
     overflow: hidden;
     padding: 40px 20px;
 }
+
 .about_inner::before {
     content: "";
     background-color: #fff;
@@ -508,7 +565,8 @@ ul{
     margin-left: -168px;
 
 }
-.about_inner{
+
+.about_inner {
     width: 100%;
     background-color: pink;
     display: flex;
@@ -518,29 +576,33 @@ ul{
     text-align: center;
     justify-content: space-between;
 }
-.about_inner img{
+
+.about_inner img {
     width: 50%;
 }
 
-.about_text{
+.about_text {
     position: absolute;
     top: 40%;
-    left:50%;
+    left: 50%;
     z-index: 500;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
-.about_p{
+
+.about_p {
     width: 300px;
 }
-.about_h2{
+
+.about_h2 {
     position: relative;
     font-size: 60px;
     letter-spacing: 8px;
     margin-bottom: 35px;
     font-family: "akrobat";
 }
-.about h2::before{
+
+.about h2::before {
     content: "";
     position: absolute;
     left: -40px;
@@ -551,7 +613,7 @@ ul{
     transform: rotate(15deg);
 }
 
-.about_text a{
+.about_text a {
     margin-top: 100px;
     position: relative;
     display: block;
@@ -572,14 +634,15 @@ ul{
 
 
 /* 合作伙伴样式 */
-.friend{
+.friend {
     position: relative;
     min-height: 600px;
     /* background-color: pink; */
     overflow: hidden;
     margin-bottom: 120px;
 }
-.friend::before{
+
+.friend::before {
     content: "";
     background-color: #f4f4f4;
     width: 326px;
@@ -590,7 +653,8 @@ ul{
     transform: rotate(15deg);
     z-index: -1;
 }
-.friend h2{
+
+.friend h2 {
     position: relative;
     font-size: 60px;
     letter-spacing: 8px;
@@ -598,7 +662,7 @@ ul{
     font-family: "akrobat";
 }
 
-.friend h2::before{
+.friend h2::before {
     content: "";
     position: absolute;
     left: -56px;
@@ -608,16 +672,19 @@ ul{
     height: 110px;
     transform: rotate(-15deg);
 }
-.friend_inner{
+
+.friend_inner {
     position: relative;
     width: 1200px;
     margin: 0 auto;
 }
-.friend_text{
+
+.friend_text {
     width: 500px;
     margin-left: -20px;
 }
-.friend .list-logo{
+
+.friend .list-logo {
     padding: 0;
     margin: 0;
     position: absolute;
@@ -629,6 +696,7 @@ ul{
     width: 700px;
     transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
 }
+
 .friend .list-logo li {
     width: 216px;
     height: 120px;
@@ -636,32 +704,36 @@ ul{
     margin-right: 16px;
     box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 3%);
 }
-.friend .list-logo li img{
+
+.friend .list-logo li img {
     width: 100%;
     height: 100%;
 }
 
 /* 底部样式 */
-footer .top_area{
+footer .top_area {
     width: 100%;
     height: 200px;
     background: url('./assets/img/index/foot.jpg') no-repeat;
     background-size: cover;
 }
+
 footer .bottom_area {
     background-color: #000;
     padding: 68px 0 53px 0;
 }
-footer .footer_inner{
+
+footer .footer_inner {
     width: 1200px;
     margin: 0 auto;
 }
 
-.navi-box{
+.navi-box {
     display: flex;
     justify-content: center;
 }
-.navi-name{
+
+.navi-name {
     position: relative;
     width: 220px;
     margin-right: 40px;
@@ -669,7 +741,7 @@ footer .footer_inner{
     font-size: 14px;
     font-weight: bold;
     font-family: "akrobat";
-    letter-spacing: 1.75px; 
+    letter-spacing: 1.75px;
 }
 
 .navi-name::before {
@@ -707,7 +779,7 @@ footer .footer_inner{
     transform: translateY(-50%);
 }
 
-footer .number{
+footer .number {
     color: #fff;
     text-align: center;
 }
@@ -716,7 +788,7 @@ footer .number{
 
 
 
-.card2{
+.card2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -738,13 +810,13 @@ footer .number{
     width: 310px;
     height: 100%;
     transition: all 0.6s;
-} 
+}
 
-.list-service li .card2:hover::before{
+.list-service li .card2:hover::before {
     transform: scale(1.2)
 }
 
-.example_text{
+.example_text {
     position: absolute;
     top: 30%;
     right: 30px;
@@ -752,8 +824,43 @@ footer .number{
     z-index: 222;
 }
 
-.example_intro{
+.example_intro {
     width: 500px;
     margin-bottom: 100px;
 }
 
+@keyframes see {
+    0% {
+        transform: translateY(-50%);
+
+    }
+
+    100% {
+        transform: translateY(0) rotate(-15deg);
+
+    }
+}
+
+@keyframes seesmall {
+    0% {
+        transform: translateY(-50%);
+
+    }
+
+    100% {
+        transform: translateY(0) rotate(10deg);
+
+    }
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
