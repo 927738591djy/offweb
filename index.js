@@ -7,6 +7,9 @@ window.addEventListener('scroll', function (e) {
     var exampleFangkuai = document.querySelector('.example_fangkuai')
     var aboutImg = document.querySelectorAll('.imgsee')
     var friendFangkuai = document.querySelector('.friend_fangkuai')
+    var exampleViewmore = document.querySelector('.example_viewmore')
+    var aboutViewmore = document.querySelector('.about_viewmore')
+    var listLogo = document.querySelector('.list-logo')
     if (this.window.scrollY >= 500) {
         console.log(window.scrollY);
         abilityFangkuai.style.cssText='animation: seesmall 1s;'
@@ -14,14 +17,20 @@ window.addEventListener('scroll', function (e) {
     if (this.window.scrollY >= 1500) {
         console.log(window.scrollY);
         exampleFangkuai.style.cssText='animation: seesmall 1s;'
+       
+    }
+    if(this.window.scrollY >= 3200){
+        exampleViewmore.style.cssText='animation: appear 2s forwards;'
     }
     if (this.window.scrollY >= 3500) {
         console.log(window.scrollY);
         console.log(aboutImg);
+        aboutViewmore.style.cssText='animation: appear 2s forwards;'
         aboutImg[0].style.cssText='animation: imageSee 1s forwards;'
         aboutImg[1].style.cssText='animation: imageSee 1s forwards;'
     }
     if (this.window.scrollY >= 4239) {
+        listLogo.style.cssText='animation: appear 2s forwards;'
         friendFangkuai.style.cssText='animation: seesmall 1s;'
     }
 })

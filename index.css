@@ -254,6 +254,26 @@ ul {
     position: relative;
 }
 
+.example .content-area .example_viewmore {
+    margin-top: -100px;
+    float: right;
+    position: relative;
+    display: block;
+    width: 330px;
+    background-color: #111;
+    color: #fff;
+    font-family: "akrobat";
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 3.5px;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
+    overflow: hidden;
+    opacity: 0;
+}
+
 .list-service {
     display: flex;
     flex-wrap: wrap;
@@ -599,7 +619,7 @@ ul {
     transform: rotate(15deg);
 }
 
-.about_text a {
+.about_viewmore {
     margin-top: 100px;
     position: relative;
     display: block;

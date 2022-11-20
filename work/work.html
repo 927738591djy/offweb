@@ -16,7 +16,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="wrapper">
-        <header class="active">
+        <header>
             <div class="section-inner">
                 <div class="header-area">
                     <div class="logo-main">
@@ -40,10 +40,9 @@
 
         </header>
         <div id="contents" aria-live="polite">
-
+          
 
             <div class="container" data-namespace="single" style="visibility: visible;">
-
                 <main class="works active">
                     <!-- <div class="page_title section-inner  ">
                         <h1>WEB制作実績｜東京のWEB制作会社・ホームページ制作会社｜株式会社GIG</h1>
@@ -63,8 +62,11 @@
                         </div>
                     </section>
                     <section class="section-content js-scroll isView">
+                       
                         <div class="section-inner">
+                            <div class="fangkuai"></div>
                             <ul class="list-works">
+                               
                                 <li>
                                     <a href="../taptap/taptap.html">
                                         <p class="thumb">
@@ -280,5 +282,19 @@
       </footer>
     
 </body>
+
+
+<script>
+window.addEventListener('scroll', function (e) {
+    console.log(window.scrollY);
+    var fangkuai = document.querySelector('.fangkuai')
+    if (this.window.scrollY >= 500) {
+        console.log(window.scrollY);
+        fangkuai.style.cssText='animation: seesmall 1s;'
+    }
+})
+
+</script>
+
 
 </html>

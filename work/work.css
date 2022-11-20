@@ -7,6 +7,10 @@ header {
 
 header .section-inner {
     z-index: 10;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
 }
 .text-area{
     margin-left: 300px;
@@ -78,10 +82,22 @@ header nav .navi-global li a {
     letter-spacing: 3.5px;
 }
 
-.section-inner {
+section .section-inner {
     position: relative;
     width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.fangkuai {
+    background-color: #f4f4f4;
+    width: 326px;
+    height: 200%;
+    position: absolute;
+    top:-400px;
+    left: 10%;
+    transform: rotate(10deg);
+    z-index: -1;
 }
 
 h1 {
@@ -119,19 +135,21 @@ a {
     content: "";
     width: 681px;
     height: 261px;
-    background: url('../assets/img/index/foot.jpg') no-repeat;
+    background: url('../assets/img/work/header.png') no-repeat;
     background-size: 100%;
     position: absolute;
     right: 0;
     bottom: -100px;
     z-index: 2;
+    animation: seetwo 1s;
 }
 
 .section-head .black-area {
     position: relative;
     height: 325px;
-    width: 60%;
+    width: 80%;
     background-color: #000;
+    animation: see 1s;
 }
 
 .section-head .black-area .section-inner {
@@ -245,7 +263,6 @@ a {
     height: 510px;
     margin-bottom: 80px;
     background-color: #fff;
-    -webkit-box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
     box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
 }
 
@@ -257,7 +274,12 @@ a {
     height: 100%;
     display: block;
 }
-
+.section-content .list-works li:hover img {
+    transform: scale(1.2)
+}
+.section-content .list-works li:hover a::before {
+    transform: translateX(10px)
+}
 .works .section-content .list-works li a:before {
     content: "";
     background: url('../assets/img/icon-arrow-black.png') no-repeat;
@@ -486,4 +508,39 @@ footer .footer_inner {
 footer .number {
     color: #fff;
     text-align: center;
+}
+@keyframes see {
+    0% {
+        transform: translatex(-100%);
+
+    }
+
+    100% {
+        transform: translatex(0);
+
+    }
+}
+
+@keyframes seetwo {
+    0% {
+        transform: translatex(200%);
+
+    }
+
+    100% {
+        transform: translatex(0);
+
+    }
+}
+
+@keyframes seesmall {
+    0% {
+        transform: translateY(-50%);
+
+    }
+
+    100% {
+        transform: translateY(0) rotate(10deg);
+
+    }
 }
