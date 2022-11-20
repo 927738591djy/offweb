@@ -5,13 +5,24 @@ window.addEventListener('scroll', function (e) {
     console.log(window.scrollY);
     var abilityFangkuai = document.querySelector('.ability_fangkuai')
     var exampleFangkuai = document.querySelector('.example_fangkuai')
-    if (this.window.scrollY >= 300) {
+    var aboutImg = document.querySelectorAll('.imgsee')
+    var friendFangkuai = document.querySelector('.friend_fangkuai')
+    if (this.window.scrollY >= 500) {
         console.log(window.scrollY);
         abilityFangkuai.style.cssText='animation: seesmall 1s;'
     }
-    if (this.window.scrollY >= 1300) {
+    if (this.window.scrollY >= 1500) {
         console.log(window.scrollY);
         exampleFangkuai.style.cssText='animation: seesmall 1s;'
+    }
+    if (this.window.scrollY >= 3500) {
+        console.log(window.scrollY);
+        console.log(aboutImg);
+        aboutImg[0].style.cssText='animation: imageSee 1s forwards;'
+        aboutImg[1].style.cssText='animation: imageSee 1s forwards;'
+    }
+    if (this.window.scrollY >= 4239) {
+        friendFangkuai.style.cssText='animation: seesmall 1s;'
     }
 })
 

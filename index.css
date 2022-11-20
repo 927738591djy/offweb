@@ -546,40 +546,26 @@ ul {
 
 /* 关于我们样式 */
 .about {
+    margin-bottom: 120px;
+    height: 700px;
     position: relative;
-    padding: 100px 0;
-    overflow: hidden;
-    padding: 40px 20px;
-}
-
-.about_inner::before {
-    content: "";
-    background-color: #fff;
-    width: 326px;
-    height: 200%;
-    transform: rotate(15deg);
-    z-index: 100;
-    position: absolute;
-    left: 50%;
-    top: -50%;
-    margin-left: -168px;
-
-}
-
-.about_inner {
-    width: 100%;
-    background-color: pink;
     display: flex;
-    height: 800px;
-    position: relative;
-    margin-bottom: 103px;
-    text-align: center;
     justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
-.about_inner img {
-    width: 50%;
+.about_fangkuai{
+    z-index: 300;
+    left: 50%;
+    margin-left: -163px;
 }
+
+.about img {
+    width: 50%;
+    height: 560px;
+}
+
 
 .about_text {
     position: absolute;
@@ -641,7 +627,10 @@ ul {
     overflow: hidden;
     margin-bottom: 120px;
 }
-
+.friend_fangkuai{
+    left: 100px;
+}
+/* 
 .friend::before {
     content: "";
     background-color: #f4f4f4;
@@ -652,7 +641,7 @@ ul {
     top: -400px;
     transform: rotate(15deg);
     z-index: -1;
-}
+} */
 
 .friend h2 {
     position: relative;
@@ -862,5 +851,17 @@ footer .number {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes imageSee {
+    0% {
+        transform: translateY(-50%);
+
+    }
+
+    100% {
+        transform: translateY(0)
+
     }
 }
