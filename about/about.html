@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +17,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="wrapper">
-        <header class="active">
+        <header>
             <div class="section-inner">
                 <div class="header-area">
                     <div class="logo-main">
@@ -38,57 +39,55 @@
                 </div>
             </div>
 
-        
         </header>
-        
-
-
         <div id="contents" aria-live="polite">
-
+          
 
             <div class="container" data-namespace="single" style="visibility: visible;">
-
                 <main class="works active">
-                    <!-- <div class="page_title section-inner  ">
-                        <h1>WEB制作実績｜東京のWEB制作会社・ホームページ制作会社｜株式会社GIG</h1>
-                    </div> -->
-                    
                     <section class="section-head">
                         <div class="black-area">
                             <div class="section-inner">
                                 <div class="text-area">
-                                    <h2>关于我们</h2>
-                                    <p class="text-mini">关于我们的介绍</p>
+                                    <h2>about</h2>
+                                    <p class="text-mini">关于我们</p>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    
-              
+                    <section class="section-content js-scroll isView">
+                       
+                        <div class="section-inner">
+                            <div class="fangkuai"></div>
+                            <div class="about_us">
+                                <div class="about_img">
+                                    <img src="../assets/img/index/foot.jpg" alt="">
+                                    <div>这个是我们团队的成员构成</div>
+                                </div>
+                                <div class="about_img">
+                                    <img src="../assets/img/index/foot.jpg" alt="">
+                                    <div>这个是我们团队的成员构成</div>
+                                </div>
+                                <div class="about_img">
+                                    <img src="../assets/img/index/foot.jpg" alt="">
+                                    <div>这个是我们团队的成员构成</div>
+                                </div>
+                                <div class="about_img">
+                                    <img src="../assets/img/index/foot.jpg" alt="">
+                                    <div>这个是我们团队的成员构成</div>
+                                </div>
+                            </div>
+                            
+                         
+                        </div>
+                    </section>
 
-                    <div class="about_us">
-                        <div class="about_img">
-                            <img src="../assets/img/index/foot.jpg" alt="">
-                            <div>这个是我们团队的成员构成</div>
-                        </div>
-                        <div class="about_img">
-                            <img src="../assets/img/index/foot.jpg" alt="">
-                            <div>这个是我们团队的成员构成</div>
-                        </div>
-                        <div class="about_img">
-                            <img src="../assets/img/index/foot.jpg" alt="">
-                            <div>这个是我们团队的成员构成</div>
-                        </div>
-                        <div class="about_img">
-                            <img src="../assets/img/index/foot.jpg" alt="">
-                            <div>这个是我们团队的成员构成</div>
-                        </div>
-                    </div>
+
+
 
                 </main>
             </div>
         </div>
-
 
     </div>
 
@@ -114,4 +113,44 @@
     
 </body>
 
+
+<script>
+window.addEventListener('scroll', function (e) {
+    console.log(window.scrollY);
+    var fangkuai = document.querySelector('.fangkuai')
+    if (this.window.scrollY >= 500) {
+        console.log(window.scrollY);
+        fangkuai.style.cssText='animation: seesmall 1s;'
+    }
+})
+
+</script>
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
