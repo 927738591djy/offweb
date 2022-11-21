@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 header {
     position: fixed;
     width: 100%;
@@ -93,7 +84,6 @@ header nav .navi-global li a {
 
 section .section-inner {
     position: relative;
-    width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     margin-bottom: 120px;
@@ -235,9 +225,13 @@ a {
 .works .section-content {
     position: relative;
     overflow: hidden;
-    margin-top: 178px;
+    /* margin-top: 178px; */
     padding-top: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 120px;
+     background:url('../assets/img/contact/bg.png') no-repeat;
+    background-size: cover;
+    height: 500px; 
+     filter: blur(2.3px);
 }
 
 .works .section-content .section-inner:before {
@@ -259,134 +253,6 @@ a {
     left: -500px;
 }
 
-.works .section-content .list-works {
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    transition: all 1s ease 0.4s;
-}
-
-.works .section-content .list-works li {
-    width: 560px;
-    height: 510px;
-    margin-bottom: 80px;
-    background-color: #fff;
-    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
-}
-
-.works .section-content .list-works li a {
-    position: relative;
-    text-decoration: none;
-    color: #111;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.section-content .list-works li:hover img {
-    transform: scale(1.2)
-}
-.section-content .list-works li:hover a::before {
-    transform: translateX(10px)
-}
-.works .section-content .list-works li a:before {
-    content: "";
-    background: url('../assets/img/icon-arrow-black.png') no-repeat;
-    width: 32px;
-    height: 11px;
-    background-size: 100%;
-    position: absolute;
-    z-index: 50;
-    left: 32px;
-    bottom: 32px;
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-    left: initial;
-    right: 30px;
-    bottom: 32px;
-}
-
-.works .section-content .list-works li .thumb {
-    overflow: hidden;
-}
-
-.works .section-content .list-works li img {
-    width: 560px;
-    height: 350px;
-    transition: -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.works .section-content .list-works li .detail-box {
-    position: relative;
-    margin: 0 80px;
-}
-
-.works .section-content .list-works li .detail-box:before {
-    content: "";
-    background-color: yellow;
-    width: 30px;
-    height: 88px;
-    background-size: 100%;
-    position: absolute;
-    left: -50px;
-    top: -70px;
-}
-
-.works .section-content .list-works li .client {
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 21px;
-}
-
-.works .section-content .list-works li .title {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.4;
-    margin: 10px 0;
-    letter-spacing: 0.6px;
-}
-
-.works .section-content .list-works li .category {
-    color: #888888;
-    font-size: 12px;
-    font-family: "akrobat";
-    line-height: 1.5;
-}
-
-.works .section-content .list-works li a {
-    position: relative;
-    text-decoration: none;
-    color: #111;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.works .section-content .list-works li:nth-child(even) {
-    margin-top: 80px;
-}
-
-.works .section-content .list-works li {
-    width: 560px;
-    height: 510px;
-    margin-bottom: 80px;
-    background-color: #fff;
-    -webkit-box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
-    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
-}
-
-.works .section-content .list-works li a {
-    position: relative;
-    text-decoration: none;
-    color: #111;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
 .works .section-content .section-inner:after {
     content: "";
@@ -580,4 +446,10 @@ li {
 
 body {
     margin: 0;
+}
+
+.bg{
+    /* background:url('../assets/img/contact/bg.png') no-repeat;
+    background-size: cover;
+    height: 1500px; */
 }

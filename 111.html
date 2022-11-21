@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>手风琴</title>
+  <title>Document</title>
   <link rel="stylesheet" href="./gg.css">
 </head>
-
 <body>
-  <div class="list">
-    <ul>
-      <li>
-        <input type="radio" name="swith"></input>
-        
-        <div class="bj">
-            <h2>定制化开发</h2>
-            <p>asdjhffffffffffffffffffffffffffff</p>
-          
-      </li>
-      <li>
-        <input type="radio" name="swith" checked>
-        <div class="bj">
-          <div></div>
-        </div>
-      </li>
-      <li>
-        <input type="radio" name="swith">
-        <div class="bj">
-          <div></div>
-        </div>
-      </li>
-      <li>
-        <input type="radio" name="swith">
-        <div class="bj">
-          <div></div>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <div className="WorldBookDayQuestionOne__textWrap">
+    {text.split('').map((t, idx) => (
+         /* eslint-disable-next-line react/no-array-index-key */
+      <span key={idx} className="WorldBookDayQuestionOne__text">
+                {t}
+       </span>
+     ))}
+</div>
 </body>
-
 </html>
