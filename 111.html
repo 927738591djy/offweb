@@ -1,160 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>手风琴</title>
+  <link rel="stylesheet" href="./gg.css">
 </head>
+
 <body>
-  
+  <div class="list">
+    <ul>
+      <li>
+        <input type="radio" name="swith"></input>
+        
+        <div class="bj">
+            <h2>定制化开发</h2>
+            <p>asdjhffffffffffffffffffffffffffff</p>
+          
+      </li>
+      <li>
+        <input type="radio" name="swith" checked>
+        <div class="bj">
+          <div></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="swith">
+        <div class="bj">
+          <div></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="swith">
+        <div class="bj">
+          <div></div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </body>
-<script>
-textStage = new createjs.Stage("text");
 
-stage = new createjs.Stage("stage");
-
-text = new createjs.Text("t", "80px 'Source Sans Pro'", "#eee");
-
-circle = new createjs.Shape();
-
- // c-元素点对象，dir-方向，in:向字聚集，out：打散
-
- // movement-jiggle：快速抖动，float：缓慢移动
-
- function tweenCircle(c, dir) {
-
-if(c.tween) c.tween.kill();
-
-if(dir == 'in') {
-
-//向字聚集
-
-    c.tween = TweenLite.to(c, 0.4, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
-
-    c.movement = 'jiggle';
-
-    tweenCircle(c);
-
-    }});
-
-} else if(dir == 'out') {
-
-//打散
-
-    c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
-
-    c.movement = 'float';
-
-    tweenCircle(c);
-
-    }});
-
-} else {
-
-    if(c.movement == 'float') {
-
-    //打散状态下的缓慢移动
-
-    c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100+Math.random()*200, y: c.y + -100+Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
-
-        onComplete: function() {
-
-        tweenCircle(c);
-
-        }});
-
-    } else {
-
-    //聚集状态下的快速抖动
-
-    c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*3, y: c.originY + Math.random()*3, ease:Quad.easeInOut,
-
-        onComplete: function() {
-
-        tweenCircle(c);
-
-        }});
-
-    }
-
-}
-
-}
-
-
- //text配置后，画到canvas
-
- textStage.addChild(text);
-
- textStage.update();
-
- //获取[文字Canvas]像素列表
-
- var ctx = document.getElementById('text').getContext('2d');
-
- var pix = ctx.getImageData(0,0,600,200).data;
-
- //获取的像素是RGBA4个表示一个像素点
-
- textPixels = [];
-
- for (var i = pix.length; i >= 0; i -= 4) {
-
-     if (pix[i] != 0) {
-
-     var x = (i / 4) % 600; // x轴位置，%600(行宽)：用于计算多行
-
-     var y = Math.floor(Math.floor(i/600)/4); // Y轴位置
-
-     //下面的代码，各像素圆点之间的距离为8
-
-     if((x && x%8 == 0) && (y && y%8 == 0)) textPixels.push({x: x, y: y});
-
-     }
-
- }
-
- for(var i= 0, l=textPixels.length; i<l; i++) {
-
-circles[i].originX = offsetX + textPixels[i].x;
-
-circles[i].originY = offsetY + textPixels[i].y;
-
-tweenCircle(circles[i], 'in');
-
-}
-
-textFormed = true; // 是否已形成文字Flg
-
-//处理多余像素圆点，但是如果文字需要的像素圆点过多，会如何只有一半文字了吧。。。
-
-if(textPixels.length < circles.length) {
-
-for(var j = textPixels.length; j<circles.length; j++) {
-
-circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 0.1});
-
-}
-
-}
-
-
-for(var i= 0, l=textPixels.length; i<l; i++) {
-
-tweenCircle(circles[i], 'out');
-
-}
-
-if(textPixels.length < circles.length) {
-
-for(var j = textPixels.length; j<circles.length; j++) {
-
-circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 1});
-
-}
-
-}
-
-</script>
 </html>
