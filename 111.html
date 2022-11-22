@@ -8,13 +8,29 @@
   <link rel="stylesheet" href="./gg.css">
 </head>
 <body>
-  <div className="WorldBookDayQuestionOne__textWrap">
-    {text.split('').map((t, idx) => (
-         /* eslint-disable-next-line react/no-array-index-key */
-      <span key={idx} className="WorldBookDayQuestionOne__text">
-                {t}
-       </span>
-     ))}
-</div>
+  <div id="divOutput"></div>
+  
 </body>
+<script>
+  var str = "css中一个一个字显示效果!"
+  var i = 0;
+  function outPuting(){
+      var divOutput = document.getElementById('divOutput')
+      if(i<=str.length){
+          divOutput.innerHTML = str.slice(0,i++) + "";
+          setTimeout("outPuting()",200)
+      }else{
+          divOutput.innerHTML = str;
+      }
+  }
+  outPuting();
+  // 停止计时器
+  function stopSetTimeout() {
+      var highestTimeoutId = setTimeout(';');
+      for (var i = 0; i < highestTimeoutId; i++) {
+          clearTimeout(i);
+      }
+  }
+
+</script>
 </html>

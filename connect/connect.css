@@ -12,13 +12,15 @@ header .section-inner {
     width: 1200px;
     overflow: hidden;
 }
-.text-area{
+
+.text-area {
     margin-left: 300px;
 }
+
 header .header-area {
     display: flex;
     justify-content: space-between;
-    padding:20px 0;
+    padding: 20px 0;
     transition: padding-top 0.5s linear;
 }
 
@@ -88,12 +90,13 @@ section .section-inner {
     overflow: hidden;
     margin-bottom: 120px;
 }
+
 .fangkuai {
     background-color: #f4f4f4;
     width: 326px;
     height: 200%;
     position: absolute;
-    top:-400px;
+    top: -400px;
     left: 10%;
     transform: rotate(10deg);
     z-index: -1;
@@ -223,15 +226,22 @@ a {
 }
 
 .works .section-content {
+    margin-top: 100px;
     position: relative;
     overflow: hidden;
     /* margin-top: 178px; */
     padding-top: 40px;
     margin-bottom: 120px;
-     background:url('../assets/img/contact/bg.png') no-repeat;
+    background: url('../assets/img/contact/bg.png') no-repeat;
     background-size: cover;
-    height: 500px; 
-     filter: blur(2.3px);
+    height: 1000px;
+    background-position: center;
+    animation: appear 2s;
+    text-align: center;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .works .section-content .section-inner:before {
@@ -265,7 +275,6 @@ a {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
     z-index: -1;
-    -webkit-clip-path: inset(0 0 100% 0);
     clip-path: inset(0 0 100% 0);
     -webkit-transition: -webkit-clip-path 1.5s cubic-bezier(0.475, 0.425, 0, 0.995) 0.2s;
     transition: -webkit-clip-path 1.5s cubic-bezier(0.475, 0.425, 0, 0.995) 0.2s;
@@ -384,6 +393,7 @@ footer .number {
     color: #fff;
     text-align: center;
 }
+
 @keyframes see {
     0% {
         transform: translatex(-100%);
@@ -421,13 +431,14 @@ footer .number {
 }
 
 
-.about_us{
+.about_us {
     margin: 200px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.about_img{
+
+.about_img {
     display: flex;
     flex-direction: column;
     width: 48%;
@@ -448,8 +459,55 @@ body {
     margin: 0;
 }
 
-.bg{
+.bg {
     /* background:url('../assets/img/contact/bg.png') no-repeat;
     background-size: cover;
     height: 1500px; */
 }
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#divOutput {
+    font-size: 50px;
+    color: #f0d25a;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.code_box {
+    color: #fff;
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    border: 5px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    opacity: 0;
+    -webkit-filter: drop-shadow(0 0 15px #EEBF23);
+    filter: drop-shadow(0 0 15px #EEBF23);
+}
+
+.code_box img {
+    margin: 30px 0;
+}
+
+/* @keyframes animated-border {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        opacity: 1;
+	}
+} */
