@@ -953,7 +953,7 @@ footer .number {
     width: 300px;
     height: 600px;
     display: inline-block;
-    animation: scroll 10s infinite;
+    animation: scroll 10s infinite linear;
 }
 
 .list-service_two .two_box a {

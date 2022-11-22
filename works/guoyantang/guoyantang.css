@@ -108,7 +108,7 @@ a {
     position: relative;
 }
 
-.works .section-head:before {
+/* .works .section-head:before {
     content: "";
     width: 681px;
     height: 261px;
@@ -118,22 +118,29 @@ a {
     right: 0;
     bottom: -100px;
     z-index: 2;
-}
+} */
 
 .section-head .black-area {
     position: relative;
     height: 325px;
-    width: 70%;
+    width: 100%;
     background-color: #000;
 }
-.text-area{
-    margin-left: 300px;
-}
+
+/* .text-area{
+line-height: 325px;
+text-align: center;
+color: #fff;
+height: 325px;
+} */
 .section-head .black-area .section-inner {
     position: relative;
     height: 100%;
-    padding: 91px 0 36px 0;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .section-head h2 {
@@ -142,14 +149,6 @@ a {
     font-family: "Akrobat";
     letter-spacing: 6.25px;
 }
-
-.section-head .text-mini {
-    color: #fff;
-    font-size: 16px;
-    margin-top: 26px;
-}
-
-
 
 li {
     list-style: none;
@@ -192,16 +191,6 @@ footer .footer_inner {
     letter-spacing: 1.75px;
 }
 
-.navi-name::before {
-    content: "";
-    border-top: 1px solid #fff;
-    width: 120px;
-    height: 1px;
-    position: absolute;
-    top: 10px;
-    right: -30px;
-}
-
 .navi-box .list-navi_global {
     display: flex;
 }
@@ -234,18 +223,49 @@ footer .number {
 
 .example_img {
     width: 1200px;
-    margin: 200px auto;
+    margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    opacity: 0;
+    animation: appear 3s forwards;
 }
 
 .example_img img {
     width: 400px;
     height: 600px;
     margin: 0 30px;
+    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 6%);
+}
+
+.example_img h2,
+p {
+    width: 300px;
+    margin-left: 100px;
 }
 
 .example_img div:nth-child(even) {
     margin-top: 250px;
+}
+
+.name {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.name_mini {
+    color: #fff;
+    font-size: 25px;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
