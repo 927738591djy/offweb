@@ -461,8 +461,9 @@ ul {
 }
 
 .list_abillity .recruit::before {
-    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
-    background-size: 100%;
+    background: url('./assets/img/index/dinzhi.png') no-repeat;
+    background-size: cover;
+    background-position: right;
     transition: all 0.6s;
 }
 
@@ -516,10 +517,11 @@ ul {
 }
 
 .list_abillity li .text-mini {
-    font-size: 13px;
+    font-size: 18px;
     margin-bottom: 32px;
     padding-top: 48px;
     font-weight: bold;
+    color: #f0d25a;
 }
 
 .list_abillity li .title-about {
@@ -543,14 +545,16 @@ ul {
 }
 
 .list_abillity li.company::before {
-    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
-    background-size: 100%;
+    background: url('./assets/img/index/app.png') no-repeat;
+    background-size: cover;
+    background-position: right;
     transition: all 0.6s;
 }
 
 .list_abillity li.office::before {
-    background: url('./assets/img/index/1img-service_workship.png') no-repeat;
-    background-size: 100%;
+    background: url('./assets/img/index/wulian.png') no-repeat;
+    background-size: contain;
+    background-position: right;
     transition: all 0.6s;
 }
 
