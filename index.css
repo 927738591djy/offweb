@@ -222,8 +222,9 @@ ul {
     z-index: -1;
 } */
 
-.example_fangkuai{
+.example_fangkuai {
     left: 0px;
+    z-index: -1;
 }
 
 .example h2 {
@@ -255,7 +256,7 @@ ul {
 }
 
 .example .content-area .example_viewmore {
-    margin-top: -100px;
+    margin-top: 100px;
     float: right;
     position: relative;
     display: block;
@@ -285,15 +286,15 @@ ul {
     list-style: none;
 }
 
-.list-service li {
+/* .list-service li {
     position: relative;
     width: 560px;
-    height: 350px;
+    height: 500px;
     overflow: hidden;
     margin-bottom: 82px;
     box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 8%);
-}
-
+} */
+/* 
 .list-service li a {
     color: #111;
     text-decoration: none;
@@ -301,9 +302,9 @@ ul {
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
+} */
 
-.list-service li a:before {
+/* .list-service li a:before {
     content: "";
     background: url('./assets/img/icon-arrow-black.png') no-repeat;
     width: 32px;
@@ -316,7 +317,7 @@ ul {
     left: initial;
     right: 32px;
     transition: all 0.6s;
-}
+} */
 
 .list-service li a:hover::before {
     transform: translateX(10px);
@@ -355,21 +356,21 @@ ul {
     z-index: 100;
 }
 
-.list-service li a:after {
+/* .list-service li a:after {
     content: "";
     background-color: #fff;
-    width: 556px;
-    height: 150%;
+    width: 330px;
+    height: 200%;
     z-index: 1;
     position: absolute;
     right: -240px;
     top: -20px;
-    transform: rotate(15deg);
-}
+    transform: rotate(10deg);
+} */
 
-.list-service li:nth-child(even) {
+/* .list-service li:nth-child(even) {
     margin-top: -250px;
-}
+} */
 
 
 /* 业务能力样式 */
@@ -579,7 +580,7 @@ ul {
     overflow: hidden;
 }
 
-.about_fangkuai{
+.about_fangkuai {
     z-index: 300;
     left: 50%;
     margin-left: -163px;
@@ -651,9 +652,11 @@ ul {
     overflow: hidden;
     margin-bottom: 120px;
 }
-.friend_fangkuai{
+
+.friend_fangkuai {
     left: 100px;
 }
+
 /* 
 .friend::before {
     content: "";
@@ -719,7 +722,7 @@ ul {
     box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 3%);
 }
 
-.friend .list-logo li  img {
+.friend .list-logo li img {
     width: 100%;
     height: 100%;
 }
@@ -814,7 +817,7 @@ footer .number {
     overflow: hidden;
 }
 
-.list-service li .card2:before {
+/* .list-service li .card2:before {
     content: "";
     background: url('./assets/img/index/taptap.png') no-repeat;
     position: absolute;
@@ -824,7 +827,13 @@ footer .number {
     width: 310px;
     height: 100%;
     transition: all 0.6s;
+} */
+.list-service li .card2 img {
+    width: 100%;
+    height: 100%;
+
 }
+
 
 .list-service li .card2:hover::before {
     transform: scale(1.2)
@@ -840,7 +849,6 @@ footer .number {
 
 .example_intro {
     width: 500px;
-    margin-bottom: 100px;
 }
 
 @keyframes see {
@@ -887,6 +895,138 @@ footer .number {
 
     100% {
         transform: translateY(0)
-
     }
+}
+
+.list-service li {
+    margin: 40px 0;
+    width: 500px;
+    height: 385px;
+    /* box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 6%); */
+}
+
+.list-service li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    box-shadow: 11px 13px 27px 6px rgb(0 0 0 / 6%);
+}
+
+.list-service li a:hover .pc_mask {
+    animation: appear 1s;
+}
+
+.index_work_text {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    height: 15%;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.list-service li a img {
+    width: 100%;
+    height: 85%;
+}
+
+.list-service li a h2 {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.list-service_two {
+    height: 620px;
+    padding: 20px 0;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: auto;
+}
+
+.list-service_two .two_box {
+    margin: 0 40px;
+    width: 300px;
+    height: 600px;
+    display: inline-block;
+    animation: scroll 10s infinite;
+}
+
+.list-service_two .two_box a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.list-service_two .two_box a:hover .yidong_mask {
+    animation: appear 1s;
+}
+
+.list-service_two div a img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #000;
+    border-radius: 30px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(-1100px);
+    }
+}
+
+.yidongduan {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.pc_mask {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.pc_mask div {
+    border: 2px solid #f0d25a;
+    color: #f0d25a;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.yidong_mask {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    opacity: 0;
+}
+.yidong_mask div {
+    border: 2px solid #f0d25a;
+    color: #f0d25a;
+    padding: 20px;
+    border-radius: 15px;
+}
+.list-service_two::-webkit-scrollbar {
+    display:none
 }
