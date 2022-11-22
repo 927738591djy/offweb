@@ -693,8 +693,9 @@ ul {
 }
 
 .friend_text {
-    width: 500px;
+    width: 400px;
     margin-left: -20px;
+    margin-top: 100px
 }
 
 .friend .list-logo {
